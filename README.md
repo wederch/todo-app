@@ -1,7 +1,7 @@
 # Todo App
 
 This project was migrated from [meetup-workshop](https://github.com/wederch/meetup-workshop). <br><br>
-It is primarily used as a react test project. See instructions below for usage.
+It is primarily used as a react test project. For usage see instructions below.
 
 ### Requirements
 * [Git](https://git-scm.com/downloads)
