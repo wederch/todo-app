@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './todo-form.scss';
+import CSSModules from 'react-css-modules';
 
-export default class TodoForm extends React.Component {
+class TodoForm extends React.Component {
 
   constructor(props) {
     super(props);
@@ -32,13 +33,15 @@ export default class TodoForm extends React.Component {
   render() {
     return (
       <form onSubmit={this._handleSubmit}>
-        <input type="text"
+        <input styleName="input" type="text"
                placeholder="What needs to be done?"
                value={this.state.text}
                onChange={this._handleTextChange}/>&nbsp;
         <span style={{display: this.state.valid?'none':'inline'}}
-              className={styles.validationError}>Invalid input</span>
+              styleName="validationError">Invalid input</span>
       </form>
     );
   }
 }
+
+export default CSSModules(TodoForm, styles);

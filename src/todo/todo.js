@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './todo.scss';
+import CSSModules from 'react-css-modules';
 
-export default class Todo extends React.Component {
+class Todo extends React.Component {
 
   constructor(props) {
     super(props);
@@ -30,9 +31,11 @@ export default class Todo extends React.Component {
     return (
       <li data-id={this.state.id}>
         <input type="checkbox" checked={this.state.done} onChange={this._toggleDone}/>
-        <label className={styles.text} data-done={this.state.done}>{this.state.text}</label>&nbsp;
-        <label className={styles.delete} onClick={this._handleDelete}>[x]</label>
+        <label styleName="text" data-done={this.state.done}>{this.state.text}</label>&nbsp;
+        <label styleName="delete" onClick={this._handleDelete}>[x]</label>
       </li>
     );
   }
 }
+
+export default CSSModules(Todo, styles);

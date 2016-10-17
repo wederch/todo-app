@@ -1,19 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TodoList from './todo-list/todo-list';
-import TodoForm from './todo-form/todo-form';
+import TodoList from '../todo-list/todo-list';
+import TodoForm from '../todo-form/todo-form';
 import styles from './todo-app.scss';
+import CSSModules from 'react-css-modules';
 
-export default class TodoApp extends React.Component {
+class TodoApp extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {data: []};
     this.loadTodos = this.loadTodos.bind(this);
-  }
-
-  static init(id, props) {
-    return ReactDOM.render(<TodoApp {...props} />, document.getElementById(id));
   }
 
   loadTodos() {
@@ -55,11 +51,13 @@ export default class TodoApp extends React.Component {
 
   render() {
     return (
-      <div id='todoBox'>
-        <h1 className={styles.title}>Todos</h1>
+      <div styleName="view-box" id="todoBox">
+        <h1 styleName="title">Todos</h1>
         <TodoForm onSubmit={this._createTodo}/>
         <TodoList data={this.state.data} onChange={this._updateTodo} onDelete={this._deleteTodo}/>
       </div>
     );
   }
 }
+
+export default CSSModules(TodoApp, styles);

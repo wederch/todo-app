@@ -1,7 +1,9 @@
+@import "../global-styles/colors.scss";
+
 .delete {
   cursor: pointer;
   &:hover{
-    background-color: orangered;
+    background-color: $delete-red;
   }
 }
 
