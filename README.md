@@ -1,4 +1,7 @@
-# Treating your front end Code like a Professional
+# Todo App
+
+This project was migrated from [meetup-workshop](https://github.com/wederch/meetup-workshop). <br><br>
+It is primarily used as a react test project. See instructions below for usage.
 
 ### Requirements
 * [Git](https://git-scm.com/downloads)
@@ -6,11 +9,9 @@
 * Your favorite code editor
 
 ### Installation
-0. Download and install Git and Node.js.
-1. Open cli and navigate to desired destination.
-2. Run the following commands:
+
  * ```git clone https://github.com/wederch/meetup-workshop.git```
- * ```cd meetup-workshop```
+ * ```cd todo-app```
  * ```npm install```
 
 ### Usage
