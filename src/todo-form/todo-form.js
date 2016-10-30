@@ -32,7 +32,7 @@ export default class TodoForm extends React.Component {
   render() {
     return (
       <form onSubmit={this._handleSubmit}>
-        <input type="text"
+        <input className={styles.input} type="text"
                placeholder="What needs to be done?"
                value={this.state.text}
                onChange={this._handleTextChange}/>&nbsp;
