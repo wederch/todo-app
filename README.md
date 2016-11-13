@@ -28,3 +28,14 @@ Command | Purpose
 ```npm run dev``` | Run the app in watch mode (reloads server and updates app.js on change)<br> __Open browser at [localhost:8081](http://localhost:8081)__<br>*Tipp for IntelliJ/ Webstorm users: Disable 'safe write' in settings*
 ```npm run watch:js``` | Rebuild app.js on change
 ```npm run watch:server``` | Reload server on change
+
+### Todos
+ * Add Redux with Immutable.js
+ * Add environment specific webpack configuration
+ * Add routing
+ * Add RxJS
+ * Add React Hot Loader/ Replace server.js with webpack dev server
+ * Add npm publishing
+ * Add server side rendering
+ * Adhere to airbnb guidelines
+ * Add i18n
